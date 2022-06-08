@@ -24,6 +24,10 @@
   justify-content: space-between;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 .list-links {
   list-style: none;
   display: flex;

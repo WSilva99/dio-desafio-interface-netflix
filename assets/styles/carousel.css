@@ -1,12 +1,11 @@
 :root {
   --slider-padding: 5rem;
-  --width-items: 20%;
   --items-gap: 0.5rem;
   --items-per-page: 4;
 }
 
-.carousel {
-  transition: transform 300ms ease-in-out;
+.carousel-header.container {
+  padding-bottom: 0;
 }
 
 .carousel-title {
@@ -15,7 +14,7 @@
 
 .carousel-progress {
   display: flex;
-  gap: .5rem;
+  gap: var(--items-gap);
 }
 
 .progress-item {
@@ -26,33 +25,34 @@
 }
 
 .progress-item.active {
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .carousel-content {
   display: flex;
-  align-items: stretch;
   overflow: hidden;
+  align-items: stretch;
   transition: transform 300ms ease-in-out;
 }
 
 .carousel-slider {
   --slider-index: 0;
-  display: flex;
   width: 100%;
-  transform: translateX(calc(var(--slider-index) * -100%));
+  height: calc(40vh - 2 * var(--items-gap));
+  display: flex;
+  align-items: center;
   transition: transform 300ms ease-in-out;
-  margin-bottom: 1rem;
+  transform: translateX(calc(var(--slider-index) * -100%));
 }
 
-.carousel-slider > .carousel-item {
+.carousel-item {
   flex: 0 0 calc(100% / var(--items-per-page));
   max-width: calc(100% / var(--items-per-page));
   transition: transform 300ms ease-in-out;
 }
 
 .carousel-item:hover {
-  transform: scale(1.2);
+  transform: scale(1.025);
 }
 
 .carousel-item > .carousel-item-info  {

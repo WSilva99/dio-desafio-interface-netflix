@@ -1,13 +1,24 @@
 @import url('./style_guide.css');
 @import url('./layout.css');
-@import url('./header.css');
 @import url('./highlight.css');
-@import url('./content.css');
 @import url('./carousel.css');
 
-body {
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  font-weight: var(--fw-regular);
+#nav-brand {
+  color: var(--brand-color);
+  font-size: var(--fs-emphasis);
 }
 
+#content {
+  position: absolute;
+  margin-top: -15vh;
+  z-index: 1;
+}
+
+.icon-user {
+  width: 32px;
+  border-radius: 3px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

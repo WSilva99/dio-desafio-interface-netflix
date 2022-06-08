@@ -12,14 +12,14 @@
   object-fit: cover;
   object-position: top center;
   overflow: hidden;
-  filter: brightness(.8);
+  filter: brightness(.7);
   z-index: 0;
 }
 
 #highlight-info {
   position: absolute;
   left: 0;
-  bottom: calc(70vh - 300px);
+  bottom: calc(20vh);
   width: 50%;
 }
 
