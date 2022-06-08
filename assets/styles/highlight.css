@@ -1,0 +1,52 @@
+#highlight {
+  height: 80vh;
+  width: 100%;
+  z-index: 0;
+  background-color: black;
+}
+
+#image-highlight-background {
+  position: relative;
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  overflow: hidden;
+  filter: brightness(.8);
+  z-index: 0;
+}
+
+#highlight-info {
+  position: absolute;
+  left: 0;
+  bottom: calc(70vh - 300px);
+  width: 50%;
+}
+
+#highlight-actions {
+  margin-top: 2rem;
+}
+
+.btn {
+  background-color: #f3f3f3;
+  border: 1px solid transparent;
+  color: #131313;
+  padding: 1rem 2rem;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  font-weight: bold;
+}
+
+.btn-translucid-dark {
+  background-color: rgba(0, 0, 0, .5);
+  color: var(--light-color);
+}
+
+.btn-translucid-dark > i {
+  margin-right: .5rem;
+}
+
+.btn-translucid-dark:hover {
+  background-color: rgba(255, 255, 255, .5);
+}

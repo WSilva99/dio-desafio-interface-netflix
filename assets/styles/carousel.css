@@ -1,0 +1,123 @@
+:root {
+  --slider-padding: 5rem;
+  --width-items: 20%;
+  --items-gap: 0.5rem;
+  --items-per-page: 4;
+}
+
+.carousel {
+  transition: transform 300ms ease-in-out;
+}
+
+.carousel-title {
+  font-size: 1.2rem;
+}
+
+.carousel-progress {
+  display: flex;
+  gap: .5rem;
+}
+
+.progress-item {
+  flex: 0 0 1.5rem;
+  min-width: 1.5rem;
+  height: .3rem;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.progress-item.active {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.carousel-content {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  transition: transform 300ms ease-in-out;
+}
+
+.carousel-slider {
+  --slider-index: 0;
+  display: flex;
+  width: 100%;
+  transform: translateX(calc(var(--slider-index) * -100%));
+  transition: transform 300ms ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.carousel-slider > .carousel-item {
+  flex: 0 0 calc(100% / var(--items-per-page));
+  max-width: calc(100% / var(--items-per-page));
+  transition: transform 300ms ease-in-out;
+}
+
+.carousel-item:hover {
+  transform: scale(1.2);
+}
+
+.carousel-item > .carousel-item-info  {
+  display: none;
+  /* margin-bottom: 1.5rem; */
+}
+
+.carousel-item:hover > .carousel-item-info  {
+  background-color: var(--light-color);
+  margin-top: calc(-2 * var(--items-gap));
+  margin-left: var(--items-gap); 
+  margin-right: var(--items-gap);
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 1rem .3rem 2rem;
+}
+
+.item-actions {
+  display: flex;
+}
+
+.btn-rounded {
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.carousel-item > img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding: var(--items-gap);
+  aspect-ratio: 16 / 9;
+}
+
+.carousel-controler {
+  z-index: 2000;
+  opacity: 0;
+  margin-top: var(--items-gap);
+  margin-bottom: var(--items-gap);
+  width: var(--slider-padding);
+}
+
+.carousel-controler > .carousel-controler-button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, .15);
+  filter: blur(.8);
+}
+
+.carousel-controler-button > i {
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+}
+
+.carousel-controler:hover {
+  opacity: 1;
+}
+

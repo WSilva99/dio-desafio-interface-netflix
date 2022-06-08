@@ -1,0 +1,13 @@
+@import url('./style_guide.css');
+@import url('./layout.css');
+@import url('./header.css');
+@import url('./highlight.css');
+@import url('./content.css');
+@import url('./carousel.css');
+
+body {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-weight: var(--fw-regular);
+}
+
